@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\title{Tarea3 Fisica Computacional}
+\author{Samuel Vasco González}
+\date{September 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{Oscilador sin amortiguación ni forzamiento}
+\medskip
+La ecuación diferencial a resolver es $\ddot{y} + \omega^2 y =0$ donde $\omega=\sqrt{\dfrac{k}{m}}$. No aparece la gravedad ni la elongación inicial del resorte en la ED ya que se toma como origen del sistema de referencia el punto en el que el resorte y la masa suspendida están en equilibrio.
+$k$ es el coeficiente de elasticidad del resorte.
+\medskip
+
+\subsection{Posición vs Tiempo}
+\includegraphics[width=1.3\linewidth]{figura1.jpg}
+\medskip
+Era de esperar gráficas de tipo cosenosoidales, con amplitud la elongación $y_0$, pues las soluciones son del tipo oscilador armónico simple $y(t)=Acos(\omega t)$. La frecuencia está parametrizada por $k$ y $m$, donde a mayor $k$ respecto a $m$ mayor es la frecuencia de oscilación y viceversa. Es un movomiento periódico con periodo $T=\frac{2\pi}{\omega}$. 
+\medskip
+\subsection{Espacio Fásico Velocidad vs Posición}
+\includegraphics[width=1.3\linewidth]{figura2.jpg}
+\medskip
+El espacio fásico representa un estado del sistema físico, donde Ese estado físico vendrá caracterizado por la posición de cada una de las partículas y sus respectivos momentos.
+
+Notamos que el espacio fásico de los 5 conjuntos de parámetros son líneas cerradas con simetría toroidal, lo cual implica que los estados físicos del sistema son periódicos. Además de que el hamiltoniano será invariante bajo traslaciones temporales, lo cual implica que la energía del sistema se conserva.
+\medskip
+\section{Oscilador Subamortiguado}
+\medskip
+Cuando el cuerpo sujeto al resorte se mueve en un medio que produce
+fricción sobre el cuerpo, entonces decimos que el movimiento se efectúa con
+amortiguamiento. La ecuación diferencial es de la forma:
+
+$\ddot{y}+2\lambda\dot{y}+\omega^2y=0$ 
+
+Dónde $2\lambda=\frac{\beta}{m}$ con $\beta$ el coeficiente de rozamiento.
+
+El caso subamortiguado es cuando $\omega^2 -\lambda^2>0$ 
+
+\medskip
+\subsection{Posición vs Tiempo}
+\includegraphics[width=1.3\linewidth]{figura3.jpg}
+\medskip
+En este caso el rozamiento es débil y vemos que en los 5 conjuntos de parámetros produce un comportamiento cuasiperiódico. La amplitud disminuye a medida que pasa el tiempo mientras la frecuencia se mantiene constante, la energía del sistema tambien va disminiyendo por lo que la energía del sistema no es constante y por último se nota que el sistema tiende a su estado de equilibrio. 
+\medskip
+\subsection{Espacio Fásico Velocidad vs Posición}
+\includegraphics[width=1.3\linewidth]{figura4.jpg}
+\medskip
+Notamos que el espacio fásico de los 5 conjuntos de parámetros son líneas no cerradas, lo cual implica que los estados físicos del sistema no son periódicos, por lo que hay un rompimiento en la simetría de los toros del sistema. El rompimiento de toros indica que el sistema no conserva su energía, lo cual es notorio por la presencia de la exponencial negativa en la forma funcional de la solución del oscilador subamortiguado $y(t)=Ae^{-\lambda t} sin(\sqrt{\omega^2-\lambda^2} t)$.
+\medskip
+\end{document}
